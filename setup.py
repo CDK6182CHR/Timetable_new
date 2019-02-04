@@ -11,5 +11,8 @@ py_modules = ['checi3',
               'connect2',
               'direction',
               'utility',
-              '__init__',]  # 发布的包中的模块文件列表
+              '__init__',],  # 发布的包中的模块文件列表
+packages = find_packages('src'),  # 必填
+      package_dir = {'':'src'},         # 必填
+
 )
