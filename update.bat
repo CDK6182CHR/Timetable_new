@@ -8,6 +8,9 @@ git add utility.py
 git add checi3.py
 git add connect2.py
 git add update.bat
+git add __init__.py
+git add setup.py
 
 git commit -m 'update'
 git push origin master
+pause
