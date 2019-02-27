@@ -11,9 +11,9 @@ Checi类的实例。
 
 车站列信息决不允许空格。
 """
-from direction import judge_direction
+from .direction import judge_direction
 from collections import OrderedDict
-from utility import split_checi,judge_type,isKeche
+from .utility import split_checi,judge_type,isKeche
 from datetime import datetime,timedelta
 
 class Checi():
@@ -294,6 +294,8 @@ class Train():
         """
         检查并改正可能存在的顺序排错问题。
         """
+        if self.empty():
+            return
         changed = False
         timelist = list(self.timetable.items())
         for i in range(len(timelist)-1):

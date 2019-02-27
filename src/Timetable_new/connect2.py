@@ -7,9 +7,9 @@ method参数表示连接方式，默认为0，行别不变。
 1：down-up型，所有下行在前。
 2：up-down型，所有上行在前。
 """
-from direction import judge_order_by_direction,judge_order_by_station
+from .direction import judge_order_by_direction,judge_order_by_station
 from datetime import datetime
-from utility import stationEqual
+from .utility import stationEqual
 
 def connect(trainraw1,trainraw2,method=-1):
     if trainraw1.down != trainraw2.down and method == 0:
